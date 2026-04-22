@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1a1a"/>
+      <stop offset="1" stop-color="#2a1418"/>
+    </linearGradient>
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#ffffff" fill-opacity="0.06"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="520" fill="url(#g)"/>
+  <rect width="800" height="520" fill="url(#dots)"/>
+  <!-- laptop -->
+  <g transform="translate(120 160)">
+    <rect x="0" y="0" width="420" height="260" rx="14" fill="#0f0f0f" stroke="#f13e68" stroke-width="2"/>
+    <rect x="16" y="18" width="388" height="224" rx="6" fill="#141414"/>
+    <rect x="32" y="36" width="120" height="12" rx="3" fill="#f13e68" fill-opacity="0.8"/>
+    <rect x="32" y="58" width="240" height="8" rx="3" fill="#ffffff" fill-opacity="0.25"/>
+    <rect x="32" y="74" width="180" height="8" rx="3" fill="#ffffff" fill-opacity="0.18"/>
+    <rect x="32" y="110" width="110" height="110" rx="8" fill="#ffffff" fill-opacity="0.08"/>
+    <rect x="150" y="110" width="110" height="110" rx="8" fill="#ffffff" fill-opacity="0.08"/>
+    <rect x="268" y="110" width="110" height="110" rx="8" fill="#ffffff" fill-opacity="0.08"/>
+    <rect x="-20" y="258" width="460" height="10" rx="3" fill="#0a0a0a"/>
+  </g>
+  <!-- phone 1 (customer) -->
+  <g transform="translate(470 120) rotate(-6)">
+    <rect x="0" y="0" width="150" height="300" rx="22" fill="#0f0f0f" stroke="#f13e68" stroke-width="2"/>
+    <rect x="10" y="16" width="130" height="268" rx="14" fill="#141414"/>
+    <rect x="24" y="36" width="80" height="10" rx="3" fill="#f13e68"/>
+    <rect x="24" y="56" width="102" height="6" rx="2" fill="#ffffff" fill-opacity="0.25"/>
+    <rect x="24" y="82" width="102" height="60" rx="8" fill="#ffffff" fill-opacity="0.08"/>
+    <rect x="24" y="152" width="102" height="60" rx="8" fill="#ffffff" fill-opacity="0.08"/>
+    <rect x="24" y="222" width="102" height="36" rx="8" fill="#f13e68" fill-opacity="0.7"/>
+  </g>
+  <!-- phone 2 (driver) -->
+  <g transform="translate(600 170) rotate(8)">
+    <rect x="0" y="0" width="140" height="280" rx="22" fill="#0f0f0f" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2"/>
+    <rect x="10" y="16" width="120" height="248" rx="14" fill="#141414"/>
+    <circle cx="70" cy="110" r="48" fill="#ffffff" fill-opacity="0.06"/>
+    <circle cx="70" cy="110" r="30" fill="#ffffff" fill-opacity="0.1"/>
+    <circle cx="70" cy="110" r="12" fill="#f13e68"/>
+    <rect x="20" y="190" width="100" height="8" rx="3" fill="#ffffff" fill-opacity="0.25"/>
+    <rect x="20" y="206" width="72" height="6" rx="2" fill="#ffffff" fill-opacity="0.18"/>
+    <rect x="20" y="232" width="100" height="22" rx="6" fill="#ffffff" fill-opacity="0.08"/>
+  </g>
+</svg>

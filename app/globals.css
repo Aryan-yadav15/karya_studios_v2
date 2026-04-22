@@ -89,9 +89,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
+  overflow-x: clip;
+  max-width: 100%;
   margin: 0;
   background-color: var(--grayish-orange);
   color: var(--black);
@@ -524,7 +527,8 @@ a {
 .logo-marquee-wrap {
   display: flex;
   align-items: center;
-  width: 100vw;
+  width: 100%;
+  max-width: 100%;
   padding-bottom: 6px;
   overflow: hidden;
 }
@@ -648,6 +652,7 @@ a {
 }
 .canvass-slider-track {
   display: flex;
+  width: 100%;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -1428,7 +1433,7 @@ a {
     --_spacing---sm: 18px;         --_spacing---xsm: 18px;
     --_spacing---2xsm: 18px;
     --_spacing---container-space--container-space-40: 20px;
-    --_spacing---container-space--cs-20: 14px;
+    --_spacing---container-space--cs-20: 20px;
   }
 
   /* Slider arrows - hide absolute ones, show nav row below */
@@ -1485,9 +1490,13 @@ a {
   .services-link-wrap { font-size: 20px; line-height: 28px; padding: 14px 24px; border-radius: 18px; }
   .faq-content { padding: 24px 20px; }
   .heading-02.lora.contact { padding-left: 14px; padding-right: 14px; }
-  .project-bg-wrap { flex-flow: column; align-items: stretch; }
+  .project-bg-wrap { flex-flow: column; align-items: stretch; gap: 20px; }
   .project-bg-content { padding: 20px 4px 0; }
-  .project-tag-wrap { flex-flow: wrap; }
+  .project-tag-wrap { flex-flow: wrap; gap: 10px; }
+  .project-tag-content { flex-wrap: wrap; gap: 8px; }
+  .project-tag { padding: 6px 16px; font-size: 13px; }
+  .project-heading-sub { margin-top: 10px; font-size: 15px; line-height: 22px; padding: 0 16px; }
+  .heading-block.project.home { margin-bottom: 8px; }
   .blog-hero-collection-list { grid-template-columns: 1fr; }
   .blog-cms-link { flex-flow: column; }
   .blog-image-wrap { max-width: none; }
@@ -1496,7 +1505,6 @@ a {
   .awward-text-wrap { justify-content: flex-start; }
   .awward-sub-content { gap: 4px; }
   .button-link.red { padding: 14px 36px; }
-  body { overflow-x: hidden; }
 }
 
 /* --- Small phones (â‰¤479px) --- */
@@ -1523,7 +1531,7 @@ a {
     --_spacing---4xsm: 12px;       --_spacing---7xsm: 6px;
     --_spacing---8xsm: 4px;
     --_spacing---container-space--container-space-40: 20px;
-    --_spacing---container-space--cs-20: 10px;
+    --_spacing---container-space--cs-20: 16px;
   }
 
   .canvass-slider { padding-bottom: 0 !important; }
@@ -1770,10 +1778,14 @@ html[data-reveal-ready] [data-reveal].is-visible {
 @media (max-width: 900px) {
   .featured-project__grid { grid-template-columns: 1fr; }
   .featured-project__modules { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .featured-project { padding: 40px 20px; }
 }
 @media (max-width: 520px) {
   .featured-project__stats { grid-template-columns: 1fr 1fr; }
-  .featured-project__modules { grid-template-columns: 1fr; }
+  .featured-project__modules { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .featured-project { padding: 32px 16px; }
+  .featured-project__module { padding: 12px; gap: 8px; }
+  .featured-project__module-sub { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 }
 
 /* ============================================================

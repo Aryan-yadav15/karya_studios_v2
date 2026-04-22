@@ -56,13 +56,12 @@ export default function BlogPostPage({ params }) {
         <div className="container _840px">
           <div className="content">
             <div className="sub-heading-01---40px">{post.excerpt}</div>
-            <div className="space-24px" />
-            <div className="opacity-80">
-              In this piece we dig into the craft that shapes great digital products ,the
-              research, the sketching, the iteration, and the careful edits that turn a good
-              idea into something that actually works in market. It&rsquo;s a glimpse into how
-              we work at Karya, and the lessons we keep coming back to on every project.
-            </div>
+            <div className="space-40px" />
+            {post.body.map((para, i) => (
+              <div key={i} className="opacity-80" style={{ lineHeight: 1.8, marginBottom: '1.5rem' }}>
+                {para}
+              </div>
+            ))}
             <div className="space-40px" />
             <Link href="/blog" className="link-content">
               <div className="link-text-1">

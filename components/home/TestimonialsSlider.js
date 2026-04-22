@@ -28,7 +28,7 @@ export default function TestimonialsSlider() {
                 </em>{' '}
                 notes
               </h2>
-              <div className="slider-text-tag-wrap hidden md:block">
+              <div className="slider-text-tag-wrap">
                 <Image
                   src="https://cdn.prod.website-files.com/68b8742bd9cfcab78f7642c0/68bfddc76f737f6b1b1eddca_Team%20Text%20Icon.svg"
                   alt=""
@@ -91,12 +91,12 @@ export default function TestimonialsSlider() {
               ))}
             </div>
 
+            {/* Desktop: absolute left/right arrows */}
             <button
               type="button"
               aria-label="Previous testimonial"
               className="slider-arrow left"
               onClick={() => scroll(-1)}
-              style={{ left: -24 }}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2">
                 <path d="M19 12H5M12 19l-7-7 7-7" />
@@ -107,13 +107,36 @@ export default function TestimonialsSlider() {
               aria-label="Next testimonial"
               className="slider-arrow right"
               onClick={() => scroll(1)}
-              style={{ right: -24 }}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2">
                 <path d="M5 12h14M13 19l7-7-7-7" />
               </svg>
             </button>
           </div>
+        </div>
+
+        {/* Mobile: nav row below the card, outside overflow:hidden */}
+        <div className="slider-nav">
+          <button
+            type="button"
+            aria-label="Previous testimonial"
+            className="slider-nav-btn"
+            onClick={() => scroll(-1)}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            aria-label="Next testimonial"
+            className="slider-nav-btn"
+            onClick={() => scroll(1)}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2">
+              <path d="M5 12h14M13 19l7-7-7-7" />
+            </svg>
+          </button>
         </div>
       </div>
     </section>

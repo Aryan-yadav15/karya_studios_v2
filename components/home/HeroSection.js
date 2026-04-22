@@ -39,23 +39,6 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              <div className="hero-text-wrap">
-                <h1 className="heading-01">
-                  We{' '}
-                  <span className="heading-01 lora" style={loraStyle}>
-                    build
-                  </span>
-                </h1>
-                <div className="hero-emoji-wrap">
-                  <Image
-                    src="https://cdn.prod.website-files.com/68b8742bd9cfcab78f7642c0/68bb352d5b1084aead10271f_Emoji%20Icon.svg"
-                    alt=""
-                    width={72}
-                    height={72}
-                    unoptimized
-                  />
-                </div>
-              </div>
               <div className="hero-heading-image-wrap">
                 <Image
                   src="https://cdn.prod.website-files.com/68b8742bd9cfcab78f7642c0/68bc236759822bce06bf11f2_Hero%20Eye%20Emoji.svg"
@@ -65,7 +48,21 @@ export default function HeroSection() {
                   unoptimized
                 />
               </div>
-              <h1 className="heading-01">brands</h1>
+              <h1 className="heading-01">
+                We{' '}
+                <span className="heading-01 lora" style={loraStyle}>
+                  build
+                </span>
+              </h1>
+              <div className="hero-heading-image-wrap">
+                <Image
+                  src="https://cdn.prod.website-files.com/68b8742bd9cfcab78f7642c0/68bb352d5b1084aead10271f_Emoji%20Icon.svg"
+                  alt=""
+                  width={72}
+                  height={72}
+                  unoptimized
+                />
+              </div>
             </motion.div>
 
             <motion.div
@@ -74,13 +71,22 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
+              <h1 className="heading-01">brands</h1>
+            </motion.div>
+
+            <motion.div
+              className="heading-block home-hero bottom"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.25 }}
+            >
               <h1 className="heading-01">that stand out</h1>
               <div className="hero-heading-image-wrap bottom">
                 <Image
                   src="https://cdn.prod.website-files.com/68b8742bd9cfcab78f7642c0/68bc259d6cdd2e175ab4d92e_Hero%20Heading%20Icon.svg"
                   alt=""
-                  width={72}
-                  height={72}
+                  width={56}
+                  height={56}
                   unoptimized
                 />
               </div>

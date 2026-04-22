@@ -38,13 +38,7 @@ export default function CoreValuesGrid() {
 
         <div className="space-60px" />
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: '24px',
-          }}
-        >
+        <div className="core-values-grid">
           {CORE_VALUES.map((v) => {
             const isOpen = open === v.title;
             return (

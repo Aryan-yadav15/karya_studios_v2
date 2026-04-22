@@ -20,7 +20,7 @@ export default function ProjectSlider() {
     <section className="section">
       <div className="container _1280px">
         <div className="content">
-          <div className="align-center">
+          <div className="align-center" style={{ flexDirection: 'column', gap: 0 }}>
             <div className="heading-block project home">
               <h2 className="heading-02">
                 We do some{' '}
@@ -39,6 +39,9 @@ export default function ProjectSlider() {
                 />
               </div>
             </div>
+            <div className="project-heading-sub">
+              A selection of recent projects we&rsquo;re proud of
+            </div>
           </div>
 
           <div className="canvass-slider">
@@ -50,6 +53,7 @@ export default function ProjectSlider() {
               ))}
             </div>
 
+            {/* Desktop: absolute left/right arrows */}
             <button
               type="button"
               aria-label="Previous project"
@@ -64,6 +68,30 @@ export default function ProjectSlider() {
               type="button"
               aria-label="Next project"
               className="slider-arrow right"
+              onClick={() => scroll(1)}
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2">
+                <path d="M5 12h14M13 19l7-7-7-7" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Mobile: nav row below slider, outside overflow:hidden */}
+          <div className="slider-nav">
+            <button
+              type="button"
+              aria-label="Previous project"
+              className="slider-nav-btn"
+              onClick={() => scroll(-1)}
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2">
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              type="button"
+              aria-label="Next project"
+              className="slider-nav-btn"
               onClick={() => scroll(1)}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2">
